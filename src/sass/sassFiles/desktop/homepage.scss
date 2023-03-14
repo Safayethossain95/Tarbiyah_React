@@ -1,0 +1,677 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/global';
+
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    
+}
+.desktop{
+    overflow-y: auto;
+    .mynavbar{
+        background-color: #fff;       
+        width: 100%;        
+        height: 100px;
+        
+        .nav-link{
+            color:#000;
+            margin:0 25px;
+            padding: 0!important;
+            @include myfont(16px,400,$main_font);
+            @include media(lgDevice){
+                margin:0 12px;
+                @include myfont(14px,400,$main_font);
+            }
+        }
+        .buttonsdiv{
+            button{
+                @include myfont(18px,400,$main_font);
+                @include media(lgDevice){
+                    @include myfont(14px,400,$main_font);
+                    &:first-child{
+                        margin-right: 12px!important;
+                    }
+                }
+                &:first-child{
+                    color:#000;
+                    background: #fff;
+                    border:0;
+                    margin-right: 20px;
+
+                }
+            }
+        }
+    }
+    .bannersection{
+        height: 680px;
+        width: 100%;
+        background: linear-gradient(0deg, #0E2C39 0%, #00ADD2 130.69%);
+        
+        position: relative;        
+        z-index: 3;
+        overflow-y: visible;
+        .left{
+            width:50%;
+            position:absolute;
+            top:0;
+            left:0;
+            height: 100%;            
+            z-index: -1;
+
+        }
+        .right{
+            width:50%;
+            position:absolute;
+            top:0;
+            right:0;
+            height: 100%;            
+            z-index: -1;
+        }
+        .inneritems{
+            img{
+                margin-top: 50px;
+                width: 470px;
+            }
+            .textpart{
+                h3{
+                    color: #fff;
+                    @include myfont(60px,700,$main_font);
+                    margin-top: 135px;
+                    @include media(lgDevice){
+                        @include myfont(44px,700,$main_font);
+                    }
+                    @include media(xlgDevice){
+                        @include myfont(44px,700,$main_font);
+                    }
+                    @include media(xxlgDevice){
+                        @include myfont(56px,700,$main_font);
+                    }
+                   
+                }
+                p{
+                    color: #fff;
+                    @include myfont(20px,400,$main_font);
+                }
+                .btndiv{
+                    margin-top: 45px;
+                    a{
+                        text-decoration: none;
+                        @include myfont(18px,400,$main_font);
+                        color: #fff;
+                        margin-left: 20px;
+                    }
+                    button{
+                        
+                        padding:6px 25px;
+                        border:1px solid #000;
+                        background-color: #fff!important;        
+                        color: #000!important;                
+                        @include myfont(18px,500,$main_font);
+                        transition: 0.4s!important;
+                        border-radius: 50px;
+                        &:nth-child(2){
+                            padding:0;
+                            height: 46px;
+                            width: 46px;
+                            margin-left: 25px;
+                            svg{
+                                margin-top: -3px;
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
+        
+    }
+    .bannerbottompart{
+        border-radius: 10px;
+        height: 219px;
+        width: 100%;
+        margin: 0 auto;
+        // background-color: #fff;
+        background-color: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-50%);
+        z-index: 999;
+        position: relative;
+        .row{
+            height: 100%;
+            align-items: center;
+        }
+        .smcard{
+            text-align: center;
+            h4{
+                @include myfont(25px,500,$main_font);
+                margin-top: 10px;
+            
+                span{
+                    @include myfont(25px,700,$main_font);
+                    &:nth-child(2){
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .copyrightsection{
+        height: 100px;
+        .socials{
+            display: flex;
+            gap:25px;
+            
+            justify-content: center;
+            align-items: center;
+            a{
+                color:#000!important;
+                svg{
+                    font-size: 40px;
+                    color:#0E2C39;
+                }
+            }
+            .icondiv{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #0E2C39;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    color:#fff;
+                    font-size: 20px;
+                }
+            }
+        }
+        .left{
+            p{
+                @include myfont(16px,400,$main_font);
+            }
+        }
+    }
+    .whoarewesection{
+        height: 400px;
+        .text{
+            h4{
+                @include myfont(32px,700,$main_font);
+                color:#00596E;
+
+            }
+            p{
+                @include myfont(16px,400,$main_font);
+                color:#0E2C39;
+            }
+        }
+        .socials{
+            display: flex;
+            gap:25px;
+            margin-top: 15px;
+            a{
+                color:#000!important;
+                svg{
+                    font-size: 40px;
+                    color:#00ADD2;
+                }
+            }
+            .icondiv{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #00ADD2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    color:#fff;
+                    font-size: 20px;
+                }
+            }
+        }
+        .picframe{
+            width: 100%;
+            height: 104%;
+            border:5px solid #00ADD2;
+            img{
+                margin-top: -25px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .mostpopularcoursessection{
+        padding:60px 0;
+        .allcoursesbutton{
+            text-align: center;
+            button{
+                border-radius: 12px;
+                @include myfont(18px,500,$main_font);
+            }
+        }
+        .mostpopcoursesheading{
+           
+            p{
+                @include myfont(18px,400,$main_font);
+                color:#000;
+                margin-bottom: 0;
+            }
+        }
+        .nav-pills{
+            .nav-item{
+                
+                .nav-link{
+                    @include myfont(16px,500,$main_font);
+                    color:rgba(0,0,0,0.3);
+                    border-radius: 50px!important;
+                    &.active{
+                        background-color: rgba(0, 173, 210, 0.2);
+                        border-radius: 50px!important;
+                        color:#00596E;
+                    }
+                }
+            }
+        }
+    }
+    
+    .donationsection{
+        padding:10px 0 80px 0;
+
+        .img{
+            border:5px solid #00ADD2;
+            width: 100%;
+            height: 104%;
+            img{
+                width: 100%;
+                height: 90%;
+                margin-left: -20px;
+                transform: translateY(-25px);
+            }
+        }
+        p{
+            @include myfont(16px,400,$main_font);
+            margin-top: 20px;
+        }
+        .iconwithtext{
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            .textpartright{
+                margin-left: 20px;
+                p{
+                    margin-top: 0;
+                }
+            }
+        }
+        button{
+            margin-top: 60px;
+            border-radius: 12px;
+            margin-right: 20px;
+            @include myfont(18px,400,$main_font);
+            &:last-child{
+                background-color: transparent;
+                border:0;
+                color:#000;
+            }
+        }
+        
+    }
+
+    .meetinstructosection{
+        padding: 50px 0;
+        .img{
+            border:5px solid #00ADD2;
+            width: 100%;
+            height: 104%;
+            img{
+                width: 100%;
+                height: 90%;
+                margin-left: -20px;
+                transform: translateY(-25px);
+            }
+        }
+        .iconwithtext{
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            .textpartright{
+                margin-left: 20px;
+                p{
+                    margin-top: 0;
+                }
+            }
+        }
+        button{
+            margin-top: 60px;
+            border-radius: 12px;
+            margin-right: 20px;
+            @include myfont(18px,400,$main_font);
+            &:last-child{
+                background-color: transparent;
+                border:0;
+                color:#000;
+            }
+        }
+    }
+    
+    .learningstagessection{
+        padding: 40px 0;
+        text-align: center;
+        .mediumheading{
+            text-align: center;
+        }
+        img{
+            padding: 60px 0;
+        }
+       
+          
+          
+    }
+    .brandslogossection{
+        text-align:center;
+        .marquee {
+            margin-top: 70px;
+            position: relative;
+            width: 100vw;
+            max-width: 100%;
+            height: 120px;
+            overflow-x: hidden;
+            .track {
+              position: absolute;
+              white-space: nowrap;
+              will-change: transform;
+              width: 100%;
+              animation: marquee 15s linear infinite;
+              img{
+                width:100px;
+                margin:0 auto;
+              }
+            }
+          }
+          
+          
+          @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+          }
+          
+    }
+    .upcomingevent{
+        .mediumheading{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .upcomingCard{
+            height: 150px;
+            width: 100%;
+            border: 1px solid #EDEDED;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            .left{
+                height: 100%;
+                width: 15%;
+                background-color: #00ADD2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .flexwrap{
+                    
+                    h3{
+                        @include myfont(60px,700,$main_font);
+                        color:#fff;
+                        margin-bottom: 0;
+                        line-height: 40px;
+                    }
+                    p{
+                        @include myfont(30px,700,$main_font);
+                        color:#fff;
+                        margin-bottom: 0;
+                        line-height: 40px;
+                    }
+                }
+            }
+            .middle{
+                width: 68%;
+                height: 100%;
+                padding:0 0 0 20px ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .flexwrapmiddle{
+                    h3{
+                        @include myfont(24px,600,$main_font);
+                    color:#00596E;
+
+                    }
+                    p{
+                        @include myfont(16px,400,$main_font);
+                        color:#000;
+                    }
+                }
+            }
+            .right{
+                width: 17%;
+                height: 100%;  
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    color:#000;
+                    @include myfont(16px,400,$main_font);
+                }
+            }
+        }
+    }
+    .blogssection{
+        padding-top: 70px;
+        .mediumheading{
+            text-align: center;
+            margin-bottom: 75px;
+        }
+        .bigblogbox{
+            border-radius: 8px;
+            border: 1px solid #ededed;
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 30px;
+            .img{
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .textside{
+                padding:50px 45px;
+                h3{
+                    @include myfont(20px,600,$main_font);
+
+                }
+                p{
+                    @include myfont(16px,400,$main_font);
+
+                }
+                .iconspart{
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    .icon2{
+                        margin-left: 30px;
+                    }
+                    .textp{
+                        @include myfont(16px,400,$main_font);
+                        margin-left: 10px;
+                    }
+                }
+                .teacherpart{
+                    margin-top: 80px;
+                    display: flex;
+                    align-items: center;
+                    .name{
+                        margin-left: 15px;
+                        h3{
+                            @include myfont(16px,400,$main_font);
+                            margin-bottom: 0;
+                        }
+                        p{
+                            @include myfont(12px,400,$main_font);
+                            color:rgba(0, 0, 0, 0.5);
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .smallcards{
+            margin-bottom: 80px;
+            .smcard{
+                width: 100%;
+                height: 410px;
+                border: 1px solid #ededed;
+                border-radius: 8px;
+                overflow: hidden;
+                .textside{
+                    padding: 22px 22px 0 22px;
+                    h3{
+                        @include myfont(20px,600,$main_font);
+    
+                    }
+                    p{
+                        @include myfont(16px,400,$main_font);
+    
+                    }
+                    .iconspart{
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        .icon2{
+                            margin-left: 30px;
+                        }
+                        .textp{
+                            @include myfont(16px,400,$main_font);
+                            margin-left: 10px;
+                        }
+                    }
+                    .teacherpart{
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        .name{
+                            margin-left: 15px;
+                            h3{
+                                @include myfont(16px,400,$main_font);
+                                margin-bottom: 0;
+                            }
+                            p{
+                                @include myfont(12px,400,$main_font);
+                                color:rgba(0, 0, 0, 0.5);
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footersection{
+        
+        width: 100%;        
+        background-color: #0E2C39;
+        padding-top: 40px;
+        .topbar{
+            background: linear-gradient(90deg, #00ADD2 0%, rgba(217, 217, 217, 0) 84%, rgba(0, 173, 210, 0) 84%);
+            height: 62px;
+            width:100%;            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            .leftpart{
+                p{
+                    @include myfont(32px,700,$main_font);
+                    margin-bottom: 0;
+                    margin-left: 60px;
+                }
+            }
+            .rightpart{
+                .wrap{
+                    p{
+                        @include myfont(16px,500,$main_font);
+                        margin-bottom: 0;
+                    }
+                    h5{
+                        @include myfont(25px,700,$main_font);
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+        }
+        .prayertimeboxes{
+            border-bottom: 2px solid #fff;
+            padding-bottom: 40px;
+            .prayerbox{
+                text-align: center;
+                position:relative;
+                margin-top: 40px;
+                
+                .overlay{
+                    position:absolute;
+                    width: 100%;
+                    height: 100%;                    
+                    top:0;
+                    left:0;
+                    h4{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom:40px;
+                        @include myfont(35px,900,$main_font);
+                        color:#fff;
+                    }
+                    p{
+                        position:absolute;
+                        right:60px;
+                        bottom:30px;
+                        color: #fff;
+                        @include myfont(15px,700,$main_font);
+                    }
+                }
+            }
+        }
+        .footermainlinks{
+            padding:55px 0;
+            p{
+                @include myfont(16px,400,$main_font);
+                color:#fff;
+                margin-top: 25px;
+                text-align: justify;
+            }
+            .commonlinkscss{
+               
+                h2{
+                    @include myfont(20px,700,$main_font);
+                    color:#fff;
+                    margin-bottom: 30px;
+                }
+                a{
+                    text-decoration: none;
+                    @include myfont(16px,400,$main_font);
+                    display:block;
+                    margin-bottom: 22px;
+                    color:rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+
+}

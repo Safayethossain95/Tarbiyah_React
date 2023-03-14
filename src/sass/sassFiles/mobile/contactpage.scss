@@ -1,0 +1,25 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/global';
+
+.mobile{
+    &.contactpage{
+        .contactbarcomp{
+            padding:40px 0;
+            .contactbarcard{
+                height: 146px;
+                margin-bottom: 20px;
+                .upperpart{
+                    height: 67px;
+                }
+            }
+        }
+        .mediumsectionheader {
+            text-align: center;
+            h3{
+                margin-top: 55px;
+            }
+        }
+    }
+}
