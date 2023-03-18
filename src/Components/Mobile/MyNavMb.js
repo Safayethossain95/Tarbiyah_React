@@ -23,7 +23,7 @@ const MyNavMb = () => {
             <Link className="nav-link" to="/services">Notice</Link>
             <Link className="nav-link" to="/portfolio">Blog</Link>
             <Link className="nav-link" to="/pricing">Donation</Link>
-            <Link className="nav-link" to="/blog">Contact Us</Link>
+            <Link className="nav-link" to="/contact">Contact Us</Link>
             
             
             </Nav>

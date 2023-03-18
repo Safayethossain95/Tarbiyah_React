@@ -35,83 +35,14 @@
             border:0!important;
         }
     }
-    .bannermb{
-        height: 710px;
-        width: 100%;
-        background: linear-gradient(0deg, #0E2C39 0%, #00ADD2 130.69%);
-        overflow-x: hidden;
-        overflow-y: hidden;
-        position:relative;
-        img{
-            width: 646px;
-            height: 100%;
-        }
-        .teacherpic{
-            width: 267px;
-            position:absolute;
-            top:110px;
-            left:50%;
-            transform:translateX(-50%);
-            height: 269px;
-        }
-        .bottompart{
-            position:absolute;
-            top:400px;
-
-            h4{
-                @include myfont(30px,700,$main_font);
-                color:#fff;
-                width:80%;
-                margin:0 auto;
-            }
-            p{
-                @include myfont(16px,400,$main_font);
-                color:#fff;
-                width:80%;
-                margin:0 auto;
-            }
-            .buttons{
-                width:80%;
-                margin:0 auto;
-                margin-top: 30px;
-                .commonbutton{
-                    button{
-                        background-color: #fff!important;
-                        color:#000!important;
-                        font-size: 13px!important;
-                        padding:7px 10px;
-                    }
-                }
-                .secondbutton{
-                    button{
-                        padding:0;
-                        height: 33px;
-                        width: 33px;                        
-                        border-radius: 50%;
-                        background-color: #fff;
-                        border:0;
-                        svg{
-                            margin-top: -3px;
-                            color:#000;
-                        }
-                    }
-                    a{
-                        text-decoration: none;
-                        @include myfont(13px,400,$main_font);
-                        color: #fff;
-                        margin-left: 17px;
-                    }
-                }
-            }
-        }
-    }
+    
 
     .bannerbottompart{
         
         transform: translateY(-50%);
        
         .animatedbannerbottom{
-            width: 85%;
+            width: 90%;
             margin:0 auto;
             background-color: #fff;
             padding: 20px;

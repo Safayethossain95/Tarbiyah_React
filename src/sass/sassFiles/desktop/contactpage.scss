@@ -4,20 +4,49 @@
 @import '../../sassStyles/global';
 
 
-
-.myBanner{
-    &.otherpagebanner{
-        height: 80vh!important;
-        .bnoverlay{
-            .bnrtextwrapper{
-                margin-top: 40vh;
-            }
+.desktop{
+    .queryotherpage{
+        .submitbuttonbox{
+            text-align: center;
         }
-        video{
-            height: 80vh;
+        .myform{
+            button{
+                border-radius: 12px;
+                font-weight: 500!important;
+                margin:40px 0;
+            }
+            .basicinput{
+                input{
+                    height: 50px;
+                    border:1px solid #dfdfdf;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                    &::placeholder{
+                        color: rgba(0,0,0,0.7)!important;
+                        
+                    }
+                    &:focus-visible{
+                        outline:0;
+                        box-shadow: none;
+                    }
+                }
+                textarea{
+                    margin-bottom: 20px;
+                    border:1px solid #dfdfdf;
+                    &::placeholder{
+                        color: rgba(0,0,0,0.7)!important;
+                        
+                    }
+                    &:focus-visible{
+                        outline:0;
+                        box-shadow: none;
+                    }
+                }
+            }
         }
     }
 }
+
 .contactbarcomp{
     padding:140px 0;
 

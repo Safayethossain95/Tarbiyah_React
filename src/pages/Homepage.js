@@ -16,8 +16,6 @@ import '../sass/sassFiles/mobile/homepagemb.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollTop from '../Components/Desktop/SubComponents/ScrollTop'
-import axios from 'axios'
-import $ from 'jquery'
 import MyNavMb from '../Components/Mobile/MyNavMb'
 import BannerMb from '../Components/Mobile/BannerMb'
 import BannerBottomBarMb from '../Components/Mobile/BannerBottomBarMb'
@@ -32,6 +30,9 @@ import BlogsMb from '../Components/Mobile/BlogsMb'
 import FooterMb from '../Components/Mobile/FooterMb'
 import Copuright from '../Components/Desktop/Copuright'
 import CopyrightMb from '../Components/Mobile/CopyrightMb'
+import {bannerAPI} from '../utils/BannerAPI'
+import {bannerbottombarAPI} from '../utils/BannerBottomBarAPI'
+
 const Homepage = () => {
      
   useEffect(()=>{
@@ -60,7 +61,7 @@ const Homepage = () => {
   },[])
   useEffect(() => {
     AOS.init();
-    // {once: true}
+    
   }, [])
  
   
@@ -73,13 +74,16 @@ const Homepage = () => {
   // $( window ).load(function() {
   //   GetPrayerTime()
   // });
+  
+  
+ 
 
   return (
     <>
     <div className="mobile">
     <MyNavMb/>
-    <BannerMb/>
-    <BannerBottomBarMb/>
+    <BannerMb myprops={bannerAPI.homepage}/>
+    <BannerBottomBarMb myprops={bannerbottombarAPI.homepage}/>
     <WhoAreWeMb/>
     <MostPopularCoursesMb/>
     <DonationMb/>
@@ -95,8 +99,9 @@ const Homepage = () => {
     
     <div className="desktop">
         <MyNavbar/>
-        <Banner/>
-        <BannerbottomBar/>
+        
+        <Banner myprop={bannerAPI.homepage}/>
+        <BannerbottomBar myprops={bannerbottombarAPI.homepage}/>
         <WhoAreWe/>
         <MostPopularCourses/>
         <Donation/>

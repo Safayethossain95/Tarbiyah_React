@@ -3,7 +3,11 @@ import Container from 'react-bootstrap/Container';
 import {Nav,Navbar,Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import CommonButton from './SubComponents/CommonButton';
-const MyNavbar = () => {
+import {AiOutlineCaretDown} from 'react-icons/ai'
+import { coursemenuAPI,blogmenuAPI } from '../../utils/NavDropDownAPI';
+import DrpDwn from './SubComponents/DrpDwn';
+import DrpDonate from './SubComponents/DrpDonate';
+const MyNavbar = (props) => {
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight
@@ -23,6 +27,16 @@ const MyNavbar = () => {
         console.log(screenSize.dynamicWidth)
     })
   }, [screenSize])
+
+  const lifting = (myval)=>{
+    setdrpdwn(myval)
+  }
+
+  const [drpdwn,setdrpdwn] = useState("")
+
+  const func = (myval)=>{
+    setdrpdwn(myval)
+  } 
   return (
     <>
         <Navbar className='mynavbar' id="mynavbar" expand="lg">
@@ -33,12 +47,12 @@ const MyNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="m-auto">
-            <Link className="nav-link" to="/">Courses</Link>
+            <Link className="nav-link" onMouseEnter={() => lifting("course")} onMouseLeave={() => lifting("course")} to="/">Courses <AiOutlineCaretDown/></Link>
             <Link className="nav-link" to="/aboutus">About Us</Link>
             <Link className="nav-link" to="/services">Notice</Link>
-            <Link className="nav-link" to="/portfolio">Blog</Link>
-            <Link className="nav-link" to="/pricing">Donation</Link>
-            <Link className="nav-link" to="/blog">Contact Us</Link>
+            <Link className="nav-link" to="/blog"  onMouseEnter={() => lifting("blog")}  onMouseLeave={() => lifting("blog")} >Blog <AiOutlineCaretDown/></Link>
+            <Link className="nav-link" to="/donation" onMouseEnter={() => lifting("donation")}  onMouseLeave={() => lifting("donation")}>Donation <AiOutlineCaretDown/></Link>
+            <Link className="nav-link" to="/contact">Contact Us</Link>
             
             
             </Nav>
@@ -49,10 +63,24 @@ const MyNavbar = () => {
         </Navbar.Collapse>
 
           </div>
+
+          
         
         
         
         </Navbar>
+        {
+          drpdwn=="course"?
+          <DrpDwn func={func} api={coursemenuAPI}/>
+          :
+          drpdwn=="blog"?
+          <DrpDwn func={func} api={blogmenuAPI}/>
+          :
+          drpdwn=="donation"?
+          <DrpDonate func={func}/>
+          :
+          ""
+        }
     </>
   )
 }

@@ -108,7 +108,7 @@ const FooterMb = () => {
 
                 <div className="footermainlinks">
                     <Row>
-                    <Col xs={6} className="commonlinkscss">
+                    <Col xs={7} className="commonlinkscss">
                         {
                                 footerLinksAPI.map((item,key)=>{
                                     return(
@@ -131,7 +131,7 @@ const FooterMb = () => {
                                 })
                             }
                         </Col>
-                        <Col xs={6}  className="commonlinkscss" style={{paddingLeft:"4%"}}>
+                        <Col xs={5}  className="commonlinkscss">
                             {
                                 footerLinksAPI.map((item,key)=>{
                                     return(

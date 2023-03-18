@@ -4,7 +4,7 @@ const CommonButton = (props) => {
   return (
     <>
         <div className="commonbutton">
-            <Button>{props.text}</Button>
+            <Button onClick={props.func}>{props.text}</Button>
         </div>
     </>
   )

@@ -3,20 +3,60 @@
 @import '../../sassStyles/mixins';
 @import '../../sassStyles/global';
 
-.whowearesection{
-    h4{
-        @include myfont(22px,400,$main_font);
-        line-height: 29px;
-        text-align: justify;
+.desktop{
+    .abouttarbiyahsection{
+        p{
+            @include myfont(16px,400,$main_font);
+            color:#4F547B;
+            margin-top: 20px;
+        }
     }
-}
+    .visionmissionsubcomponent{
+        margin-top: 105px;
+        margin-bottom: 140px;
+        .text{
+            height: 100%;
+            padding-right: 30px;
+           
+            ul{
+                list-style-type: disc;
 
-.ourmission{
-    margin-bottom: 100px;
-    h4{
-        @include myfont(22px,400,$main_font);
-        line-height: 29px;
-        margin-bottom: 20px;
-        text-align: justify;
+            }
+            h5{
+                @include myfont(25px,400,$main_font);
+                color:#00ADD2;
+            }
+            h3{
+                @include myfont(32px,700,$main_font);
+                color:#00596E;
+            }
+            p{
+                @include myfont(16px,400,$main_font);
+                color:#4F547B;
+            }
+            ul{
+                li{
+                    @include myfont(16px,400,$main_font);
+                    color:#4F547B;
+                }
+            }
+        }
+        .text2{
+            height: 100%;
+            padding-left: 40px;
+            h5{
+                @include myfont(25px,400,$main_font);
+                color:#00ADD2;
+            }
+            h3{
+                @include myfont(32px,700,$main_font);
+                color:#00596E;
+            }
+            p{
+                @include myfont(16px,400,$main_font);
+                color:#4F547B;
+            }
+           
+        }
     }
 }

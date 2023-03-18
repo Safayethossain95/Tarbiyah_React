@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import {Row,Col} from "react-bootstrap"
 import $ from 'jquery'
 import CountUp from 'react-countup';
-const BannerbottomBar = () => {
+const BannerbottomBar = (props) => {
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
         dynamicHeight: window.innerHeight
@@ -29,13 +29,20 @@ const BannerbottomBar = () => {
 
          <div className="bannerbottompart"  >
          <Row  data-aos-delay="200" data-aos="fade-up" data-aos-duration="1500">
-                <Col lg={3}>
-                    <div className="smcard">
-                        <img src="./assets/images/Homepage/banner/bannerbar/icon1.png" alt="" />
-                        <h4><span><CountUp end={6} /></span><span>+</span>Courses</h4>
-                    </div>
-                </Col>
-                <Col lg={3}>
+            {
+                props.myprops.map((item,key)=>{
+                    return(
+                        <Col lg={3} key={key}>
+                            <div className="smcard">
+                                <img src={item.img} alt="" />
+                                <h4><span><CountUp end={item.counternumber} />{item.suffix?item.suffix:""}</span><span>+</span>{item.name}</h4>
+                            </div>
+                        </Col>
+                    )
+                })
+            }
+               
+                {/* <Col lg={3}>
                     <div className="smcard">
                         <img src="./assets/images/Homepage/banner/bannerbar/icon2.png" alt="" />
                         <h4><span><CountUp end={30} /></span><span>+</span>Teachers</h4>
@@ -52,7 +59,7 @@ const BannerbottomBar = () => {
                         <img src="./assets/images/Homepage/banner/bannerbar/icon4.png" alt="" />
                         <h4><span><CountUp end={12} /></span><span>+</span>Countries</h4>
                     </div>
-                </Col>
+                </Col> */}
             </Row>
 
          </div>
