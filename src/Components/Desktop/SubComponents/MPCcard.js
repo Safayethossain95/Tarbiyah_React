@@ -4,7 +4,7 @@ const MPCcard = (props) => {
     const [rating,setrating] = useState(4.7)
   return (
     <>
-        <div className="mpcCard">
+        <div className="mpcCard" >
             <div className="img">
                 <img className='w-100' src={props.apiprops.bigimgurl} alt="cardpic1" />
                 

@@ -11,8 +11,8 @@ const BannerbotttomBoxMb = () => {
          <Row>
          <Col xs={12} >
                         <motion.div className="contactbarcard" initial={{ y : 40,opacity:0 }}
-                        animate={{ y:0,opacity:1}}
-                        transition={{delay:0.25,duration:1}}>
+                        whileInView={{ y:0,opacity:1}}
+                        transition={{type:"tween",delay:0.25,duration:1.3}}>
                             <div className="upperpart">
                                 <div className="contentup">
                                     <h4><MdLocationOn style={{fontSize:"25px"}}/> Location</h4>
@@ -28,8 +28,8 @@ const BannerbotttomBoxMb = () => {
                     </Col>
                     <Col xs={12} >
                         <motion.div className="contactbarcard" initial={{ y : 40,opacity:0 }}
-                        animate={{ y:0,opacity:1}}
-                        transition={{delay:0.25,duration:1}}>
+                        whileInView={{ y:0,opacity:1}}
+                        transition={{type:"tween",delay:0.25,duration:1.3}}>
                             <div className="upperpart">
                                 <div className="contentup">
                                     <h4><FaPhone style={{transform:"rotate(90deg)",fontSize:"20px"}}/> Phone Number</h4>
@@ -46,8 +46,8 @@ const BannerbotttomBoxMb = () => {
                     </Col>
                     <Col xs={12}  >
                         <motion.div className="contactbarcard margindrop" initial={{ y : 40,opacity:0 }}
-                        animate={{ y:0,opacity:1}}
-                        transition={{delay:0.25,duration:1}}>
+                        whileInView={{ y:0,opacity:1}}
+                        transition={{type:"tween",delay:0.25,duration:1.3}}>
                             <div className="upperpart">
                                 <div className="contentup">
                                     <h4><AiOutlineMail  style={{fontSize:"25px"}}/> Email Us</h4>

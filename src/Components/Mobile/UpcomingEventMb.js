@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {upcomingEventApi} from '../../utils/UpcomingEventAPI'
 import {Row,Col,Button} from "react-bootstrap"
 import { Link } from 'react-router-dom';
@@ -14,20 +14,23 @@ const UpcomingEventMb = () => {
         centerPadding: '50px',
         arrows:false
       };
+      const [textbig,settextbig] = useState("false")
+      const handletextenlarge=(myval)=>{
+        settextbig(myval)
+        
+      }
   return (
     <>
         <div className="upcomingeventmb" data-aos-delay="400" data-aos="fade-up" data-aos-duration="2000">
             <div className="mycontainermb">
                 <h4 className='subheading'>Upcoming Event</h4>
 
-            </div>
-                
-                <Slider {...settings}>
-
+                    <Row>
+                        
                         {
-                            upcomingEventApi.map((item,key)=>{
+                            upcomingEventApi.slice(0,4).map((item,key)=>{
                                 return(
-                                    <div key={key} className="m-auto" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
+                                    <Col lg={12} key={key} className="m-auto" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
                                     <div className="upcomingCard">
                                         <div className="toppart">
                                         <div className="left">
@@ -44,18 +47,29 @@ const UpcomingEventMb = () => {
                                         </div>
                                         </div>
                                         <div className="bottom">
-                                        <p>{item.details}<Link to='/'>{item.readmoretext}</Link></p>
+                                            {
+                                                textbig==item.id?
+                                                <p>{item.detailsbig}<a onClick={()=>handletextenlarge("")}>Read less</a></p>
+                                                :
+                                                <p>{item.details}<a onClick={()=>handletextenlarge(item.id)}>{item.readmoretext}</a></p>
+
+                                            }
                                             
                                         </div>
                                     </div>
                                    
                                 
-                                     </div>
+                                     </Col>
                                 )
                             })
                         }
+                        
+                    </Row>
+            </div>
+                
+                
+                        
 
-                </Slider>
                        
                     
         </div>

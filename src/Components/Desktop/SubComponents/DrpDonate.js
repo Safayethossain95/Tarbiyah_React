@@ -32,7 +32,7 @@ const DrpDonate = (props) => {
 
       const [selectedOption, setSelectedOption] = useState(null);
       const [phemail,setphemail] = useState("");
-      const [number,setnumber] = useState(0)
+      const [number,setnumber] = useState("")
       
 
       const handleSelectoption=(e)=>{

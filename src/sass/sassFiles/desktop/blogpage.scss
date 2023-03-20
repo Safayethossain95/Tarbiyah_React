@@ -1,0 +1,12 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/typography';
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/global';
+
+.desktop{
+    .blogpagecomp{
+        .mediumheading{
+            text-align: center;
+        }
+    }
+}

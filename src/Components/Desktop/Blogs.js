@@ -31,7 +31,7 @@ const Blogs = () => {
                     <div className="bigblogbox" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
                         {
                             blogsAPI.slice(0,1).map((item,key)=>{
-                                return(
+                                return( 
                             <Row key={key}>
                             <Col lg={6}>    
                                 <div className="img">

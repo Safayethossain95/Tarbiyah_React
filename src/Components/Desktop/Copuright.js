@@ -20,7 +20,7 @@ const Copuright = () => {
         
         return(() => {
             window.removeEventListener('resize', setDimension);
-            console.log(screenSize.dynamicWidth)
+            
         })
       }, [screenSize])
       const [prayertimes,setprayertimes] = useState({})

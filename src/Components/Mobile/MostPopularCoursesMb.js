@@ -1,8 +1,9 @@
 import React from 'react'
 import Slider from "react-slick";
 
-import {courseCardAPI} from '../../utils/CoursesCardAPI';
+import {popularCoursesCardAPI} from '../../utils/CoursesCardAPI';
 import MPCcard from '../Desktop/SubComponents/MPCcard';
+import { motion } from "framer-motion";
 const MostPopularCoursesMb = () => {
     const settings = {
         dots: false,
@@ -16,16 +17,18 @@ const MostPopularCoursesMb = () => {
       };
   return (
     <>
-        <div className="mostpopularcoursesmb" data-aos-delay="400" data-aos="fade-up" data-aos-duration="2000">
-            <div className="mycontainermb">
+        <motion.div className="mostpopularcoursesmb" initial={{ y : 40,opacity:0 }}
+        whileInView={{ y:0,opacity:1}}
+        transition={{delay:0,duration:1.5}} >
+            <div className="mycontainermb mostpopcoursesheading">
                 <h4 className='subheading'>Our Most Popular Courses</h4>
-
+                <p>10,000+ unique online course list designs</p>
             </div>
                 <Slider {...settings}>
                             {
-                                courseCardAPI.map((item,key)=>{
+                                popularCoursesCardAPI.map((item,key)=>{
                                     return(
-                                        <div key={key} data-aos-delay="400" data-aos="fade-in" data-aos-duration="1800">
+                                        <div key={key} >
                                             <MPCcard apiprops={item}/>
                                         </div>
                                     )
@@ -34,7 +37,7 @@ const MostPopularCoursesMb = () => {
                     
                 
                 </Slider>
-        </div>
+        </motion.div>
     </>
   )
 }

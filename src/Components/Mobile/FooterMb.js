@@ -5,25 +5,7 @@ import FooterLinks, { footerLinksAPI } from '../../utils/FooterLinks';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 const FooterMb = () => {
-    const [screenSize, getDimension] = useState({
-        dynamicWidth: window.innerWidth,
-        dynamicHeight: window.innerHeight
-      });
-      const setDimension = () => {
-        getDimension({
-          dynamicWidth: window.innerWidth,
-          dynamicHeight: window.innerHeight
-        })
-      }
-      
-      useEffect(() => {
-        window.addEventListener('resize', setDimension);
-        
-        return(() => {
-            window.removeEventListener('resize', setDimension);
-            console.log(screenSize.dynamicWidth)
-        })
-      }, [screenSize])
+   
       const [prayertimes,setprayertimes] = useState({})
       useEffect(() => {
         const d = new Date();

@@ -23,8 +23,7 @@ const MyNavbar = (props) => {
     window.addEventListener('resize', setDimension);
     
     return(() => {
-        window.removeEventListener('resize', setDimension);
-        console.log(screenSize.dynamicWidth)
+        window.removeEventListener('resize', setDimension);        
     })
   }, [screenSize])
 
@@ -47,9 +46,9 @@ const MyNavbar = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="m-auto">
-            <Link className="nav-link" onMouseEnter={() => lifting("course")} onMouseLeave={() => lifting("course")} to="/">Courses <AiOutlineCaretDown/></Link>
+            <Link className="nav-link" onMouseEnter={() => lifting("course")} onMouseLeave={() => lifting("course")} to="/courses">Courses <AiOutlineCaretDown/></Link>
             <Link className="nav-link" to="/aboutus">About Us</Link>
-            <Link className="nav-link" to="/services">Notice</Link>
+            <Link className="nav-link" to="/notice">Notice</Link>
             <Link className="nav-link" to="/blog"  onMouseEnter={() => lifting("blog")}  onMouseLeave={() => lifting("blog")} >Blog <AiOutlineCaretDown/></Link>
             <Link className="nav-link" to="/donation" onMouseEnter={() => lifting("donation")}  onMouseLeave={() => lifting("donation")}>Donation <AiOutlineCaretDown/></Link>
             <Link className="nav-link" to="/contact">Contact Us</Link>

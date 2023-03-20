@@ -3,6 +3,7 @@ import {Row,Col} from "react-bootstrap"
 import {MdLocationOn} from "react-icons/md"
 import {FaPhone} from 'react-icons/fa'
 import {AiOutlineMail} from 'react-icons/ai'
+import { motion } from "framer-motion";
 const BannerbottombarContact = () => {
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
@@ -30,8 +31,12 @@ const BannerbottombarContact = () => {
 
          <div className="bannerbottompart bannerbottompartother">
          <Row>
-         <Col lg={4} data-aos-delay="400" data-aos="fade-up" data-aos-duration="2000">
-                        <div className="contactbarcard">
+         <Col lg={4}>
+                        <motion.div className="contactbarcard" initial={{ y : 30,opacity:0 }}
+                            animate={{ y:0,opacity:1}}
+                            transition={{delay:0,duration:2,type: "tween",
+                            stiffness: 30,
+                            }}>
                             <div className="upperpart">
                                 <div className="contentup">
                                     <h4><MdLocationOn style={{fontSize:"25px"}}/> Location</h4>
@@ -43,10 +48,14 @@ const BannerbottombarContact = () => {
                                     <p> <a target="_blank" href="https://goo.gl/maps/5gk4AizmgMPtehgP6">40/1, WEST CHAND MIA HOUSING, MOHAMMADPUR.</a> </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </Col>
-                    <Col lg={4} data-aos-delay="400" data-aos="fade-up" data-aos-duration="2000">
-                        <div className="contactbarcard">
+                    <Col lg={4}>
+                        <motion.div className="contactbarcard" initial={{ y : 30,opacity:0 }}
+                            animate={{ y:0,opacity:1}}
+                            transition={{delay:0,duration:2,type: "tween",
+                            stiffness: 30,
+                            }}>
                             <div className="upperpart">
                                 <div className="contentup">
                                     <h4><FaPhone style={{transform:"rotate(90deg)",fontSize:"20px"}}/> Phone Number</h4>
@@ -59,10 +68,14 @@ const BannerbottombarContact = () => {
                                  <p><a href="tel:+88 01841517575">+88 01841517575</a></p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </Col>
-                    <Col lg={4} data-aos-delay="400" data-aos="fade-up" data-aos-duration="2000">
-                        <div className="contactbarcard">
+                    <Col lg={4}>
+                        <motion.div className="contactbarcard" initial={{ y : 30,opacity:0 }}
+                            animate={{ y:0,opacity:1}}
+                            transition={{delay:0,duration:2,type: "tween",
+                            stiffness: 30,
+                            }}>
                             <div className="upperpart">
                                 <div className="contentup">
                                     <h4><AiOutlineMail  style={{fontSize:"25px"}}/> Email Us</h4>
@@ -75,7 +88,7 @@ const BannerbottombarContact = () => {
                             <p><a href="mailto:TARBIYAHONLINEMADRASAH@GMAIL.COM">TARBIYAHONLINEMADRASAH@GMAIL.COM</a></p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </Col>
                    
                 </Row>

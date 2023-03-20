@@ -28,7 +28,7 @@ const DrpDwn = (props) => {
       
   return (
     <>
-        <motion.div onMouseLeave={()=>props.func("")} className={`megamenu`}  initial={{ y : 20,opacity:0 }}
+        <motion.div onMouseLeave={()=>props.func("")} className={`megamenu`}  initial={{ y : -20,opacity:0 }}
                     animate={{ y:0,opacity:1}}
                     transition={{delay:0,duration:0.3}}>
         <div className={screenSize.dynamicWidth>=1200 &&screenSize.dynamicWidth <=1399?"myContainerMinimini d-flex":screenSize.dynamicWidth>=992 &&screenSize.dynamicWidth<=1199?"myContainer896 d-flex":"myContainerMini d-flex"}>

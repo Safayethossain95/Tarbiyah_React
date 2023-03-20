@@ -48,12 +48,6 @@ const Homepage = () => {
       }else{
         navbar.classList.remove("sticky");
       }
-      // if(window.pageYOffset > 59){
-      //   navbarmini.classList.add("stickymini");
-      // }else{
-      //   navbarmini.classList.remove("stickymini");
-      // }
-   
     }
     window.onscroll = function() {myFunction()};
     
@@ -63,19 +57,6 @@ const Homepage = () => {
     AOS.init();
     
   }, [])
- 
-  
-  
-  
-  // function GetPrayerTime (){
-   
-  // }
-  // document.onload(GetPrayerTime)
-  // $( window ).load(function() {
-  //   GetPrayerTime()
-  // });
-  
-  
  
 
   return (

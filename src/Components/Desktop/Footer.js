@@ -21,7 +21,7 @@ const Footer = () => {
         
         return(() => {
             window.removeEventListener('resize', setDimension);
-            console.log(screenSize.dynamicWidth)
+            
         })
       }, [screenSize])
       const [prayertimes,setprayertimes] = useState({})
@@ -31,7 +31,7 @@ const Footer = () => {
         let year = d.getFullYear()
         let month = d.getMonth()
         console.log(day,"- ",year,"- ",month)
-        const baseURL = `http://api.aladhan.com/v1/calendarByCity/${year}/${month + 1}?city=Dhaka&country=Bangladesh&method=1`
+        const baseURL = `https://api.aladhan.com/v1/calendarByCity/${year}/${month + 1}?city=Dhaka&country=Bangladesh&method=1`
        
         
         axios.get(baseURL).then((response) => {

@@ -119,7 +119,7 @@
     .mostpopularcoursesmb{
         padding-top: 45px;
         .subheading{
-            margin-bottom: 25px;
+            margin-bottom: 6px;
         }
         .mpcCard .rating .wrapper .stars{
             display: flex;
@@ -199,73 +199,7 @@
             text-align: center;
         }
     }
-    .upcomingeventmb{
-        padding-top: 50px;
-        .subheading{
-            text-align: center;
-            padding: 0 20%;
-        }
-        .slick-list{
-            padding-left: 0!important;
-            .slick-slide{
-                padding:0 0 0 18px;
-            }
-        }
-        .upcomingCard{
-            border: 1px solid #ededed;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .bottom{
-            padding: 10px;
-            p{
-                @include myfont(10px,400,$main_font);
-                color:#000;
-                a{
-                    margin-left: 7px;
-                    text-decoration: underline;
-                    color:#000;
-                }
-            }
-        }
-        .toppart{
-            display: flex;
-            align-items: center;
-            border:1px solid #ededed;
-            .left{
-                border-top-left-radius: 5px;
-                display: flex;
-                align-items:center;
-                justify-content: center;
-                width: 65px!important;
-                height: 65px;
-                background-color: #00ADD2;
-                h3,p{
-                    margin-bottom: 0;
-                }
-                .flexwrap{
-                    text-align: center;
-                    width: 65px;
-                    h3{
-                        color:#fff;
-                        @include myfont(28px,700,$main_font);
-                    }
-                    p{
-                        color:#fff;
-                        @include myfont(13px,700,$main_font);
-                    }
-                }
-            }
-            .middle{
-                padding: 10px;
-                h3{
-                    @include myfont(10px,600,$main_font);
-                    color:#00596E;
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+    
 
     .blogsectionmb{
         padding-top: 50px;
@@ -600,7 +534,7 @@
     .mynavbarmb{
         
         position: absolute;
-           
+           top:0;
         z-index: 999;
         padding:0!important;
         right:0;
