@@ -11,7 +11,7 @@ body{
     
 }
 .desktop{
-    overflow-y: auto;
+    
     
     .bannersection{
         height: 680px;
@@ -411,7 +411,11 @@ body{
                 }
                 p{
                     @include myfont(16px,400,$main_font);
-
+                    span{
+                        @include myfont(16px,400,$main_font);
+                        color:#00596E;
+                        text-decoration: underline;
+                    }
                 }
                 .iconspart{
                     margin-top: 20px;
@@ -460,7 +464,11 @@ body{
                     }
                     p{
                         @include myfont(16px,400,$main_font);
-    
+                        span{
+                            @include myfont(16px,400,$main_font);
+                            color:#00596E;
+                            text-decoration: underline;
+                        }
                     }
                     .iconspart{
                         margin-top: 10px;
@@ -530,38 +538,7 @@ body{
 
             }
         }
-        .prayertimeboxes{
-            border-bottom: 2px solid #fff;
-            padding-bottom: 40px;
-            .prayerbox{
-                text-align: center;
-                position:relative;
-                margin-top: 40px;
-                
-                .overlay{
-                    position:absolute;
-                    width: 100%;
-                    height: 100%;                    
-                    top:0;
-                    left:0;
-                    h4{
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        bottom:40px;
-                        @include myfont(35px,900,$main_font);
-                        color:#fff;
-                    }
-                    p{
-                        position:absolute;
-                        right:60px;
-                        bottom:30px;
-                        color: #fff;
-                        @include myfont(15px,700,$main_font);
-                    }
-                }
-            }
-        }
+        
         .footermainlinks{
             padding:55px 0;
             p{

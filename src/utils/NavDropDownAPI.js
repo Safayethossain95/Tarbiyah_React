@@ -8,32 +8,32 @@ const coursemenuAPI = {
             tabkey:"mostpopular",
             data:[
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card1.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card1.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card2.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card2.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card3.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card3.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card4.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card4.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card5.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card5.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card6.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card6.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
@@ -44,17 +44,17 @@ const coursemenuAPI = {
             tabkey:"topseller",
             data:[
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card1.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card1.png",
                     title:"Course Title 1",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card2.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card2.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card3.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card3.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
@@ -65,17 +65,17 @@ const coursemenuAPI = {
             tabkey:"topratex",
             data:[
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card1.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card1.png",
                     title:"Course Title 2",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card2.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card2.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card3.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card3.png",
                     title:"Course Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
@@ -92,32 +92,32 @@ const blogmenuAPI = {
             tabkey:"mostpopular",
             data:[
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card1.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card1.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card2.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card2.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card3.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card3.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card4.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card4.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card5.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card5.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card6.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card6.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
@@ -128,17 +128,17 @@ const blogmenuAPI = {
             tabkey:"topseller",
             data:[
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card1.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card1.png",
                     title:"Blog Title 1",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card2.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card2.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card3.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card3.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
@@ -149,17 +149,17 @@ const blogmenuAPI = {
             tabkey:"topratex",
             data:[
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card1.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card1.png",
                     title:"Blog Title 2",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card2.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card2.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },
                 {
-                    img:"./assets/images/Common/megamenu/mostpopular/card3.png",
+                    img:"/assets/images/Common/megamenu/mostpopular/card3.png",
                     title:"Blog Title",
                     paragraph:"Lorem ipsum dolor sit amet consectetur. Neque mauris"
                 },

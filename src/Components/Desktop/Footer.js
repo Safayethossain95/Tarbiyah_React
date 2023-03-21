@@ -61,7 +61,7 @@ const Footer = () => {
                     <Row>
                         <Col>
                             <div className="prayerbox">
-                                <img src="./assets/images/Homepage/footer/prayercard1.png" alt="" />
+                                <img src="/assets/images/Homepage/footer/prayercard1.png" alt="" />
                                 <div className="overlay">
                                     <h4>{String(prayertimes.Fajr).substring(1,6)}</h4>
                                     {/* <p>AM</p> */}
@@ -70,7 +70,7 @@ const Footer = () => {
                         </Col>
                         <Col>
                             <div className="prayerbox">
-                                <img src="./assets/images/Homepage/footer/prayercard2.png" alt="" />
+                                <img src="/assets/images/Homepage/footer/prayercard2.png" alt="" />
                                 <div className="overlay">
                                 <h4>{String(prayertimes.Dhuhr).substring(0,6)}</h4>
                                     {/* <p>PM</p> */}
@@ -79,7 +79,7 @@ const Footer = () => {
                         </Col>
                         <Col>
                             <div className="prayerbox">
-                                <img src="./assets/images/Homepage/footer/prayercard3.png" alt="" />
+                                <img src="/assets/images/Homepage/footer/prayercard3.png" alt="" />
                                 <div className="overlay">
                                     <h4>{String(prayertimes.Asr).substring(0,6)}</h4>
                                     {/* <p>PM</p> */}
@@ -88,7 +88,7 @@ const Footer = () => {
                         </Col>
                         <Col>
                             <div className="prayerbox">
-                                <img src="./assets/images/Homepage/footer/prayercard4.png" alt="" />
+                                <img src="/assets/images/Homepage/footer/prayercard4.png" alt="" />
                                 <div className="overlay">
                                     <h4>{String(prayertimes.Maghrib).substring(0,6)}</h4>
                                     {/* <p>PM</p> */}
@@ -97,7 +97,7 @@ const Footer = () => {
                         </Col>
                         <Col>
                             <div className="prayerbox">
-                                <img src="./assets/images/Homepage/footer/prayercard5.png" alt="" />
+                                <img src="/assets/images/Homepage/footer/prayercard5.png" alt="" />
                                 <div className="overlay">
                                     <h4>{String(prayertimes.Isha).substring(0,6)}</h4>
                                     {/* <p>PM</p> */}
@@ -110,7 +110,7 @@ const Footer = () => {
                 <div className="footermainlinks">
                     <Row>
                         <Col lg={4}>
-                            <img className='w-100' src="./assets/images/Homepage/footer/footermain/footerlogo.png" alt="" />
+                            <img className='w-100' src="/assets/images/Homepage/footer/footermain/footerlogo.png" alt="" />
                             <p>Lorem ipsum dolor sit amet consectetur. Neque mauris massa mauris et dui volutpat nunc purus felis. Est vitae et velit at. Interdum sodales gravida mattis venenatis fusce sagittis quisque.</p>
                         </Col>
                         <Col lg={2} className="commonlinkscss" style={{paddingLeft:"4%"}}>

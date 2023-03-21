@@ -1,9 +1,10 @@
 import React,{useEffect,useState} from 'react'
+import MediumHeading from '../../Desktop/SubComponents/MediumHeading';
+import { blogsAPI } from '../../../utils/BlogsCardAPI';
 import {Row,Col,Button} from "react-bootstrap"
-import MediumHeading from './SubComponents/MediumHeading';
-import CommonButton from './SubComponents/CommonButton';
-import { blogsAPI } from '../../utils/BlogsCardAPI';
-const Blogs = () => {
+import { useNavigate } from 'react-router-dom';
+const BlogPageComp = () => {
+    let navigate = useNavigate()
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
         dynamicHeight: window.innerHeight
@@ -19,20 +20,25 @@ const Blogs = () => {
         window.addEventListener('resize', setDimension);
         
         return(() => {
-            window.removeEventListener('resize', setDimension);
-            console.log(screenSize.dynamicWidth)
+            window.removeEventListener('resize', setDimension);        
         })
       }, [screenSize])
+
+      const handleSingleBlog=(mykey)=>{
+        navigate(`/blog/${mykey}`)
+      }
   return (
     <>
-            <div className="blogssection" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
-                <div className={screenSize.dynamicWidth>=1200 &&screenSize.dynamicWidth <=1399?"myContainerMinimini":screenSize.dynamicWidth>=992 &&screenSize.dynamicWidth<=1199?"myContainer896":"myContainerMini"}>
-                    <MediumHeading text="Blogs"/>
-                    <div className="bigblogbox" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
+        <div className="blogpagecomp">
+            <div className={screenSize.dynamicWidth>=1200 &&screenSize.dynamicWidth <=1399?"myContainerMinimini":screenSize.dynamicWidth>=992 &&screenSize.dynamicWidth<=1199?"myContainer896":"myContainerMini"}>
+              
+                <MediumHeading text="Blogs"/>
+
+                <div className="bigblogbox" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
                         {
                             blogsAPI.slice(0,1).map((item,key)=>{
                                 return( 
-                            <Row key={key}>
+                            <Row key={key} onClick={()=>handleSingleBlog(item.id)} style={{cursor:"pointer"}}>
                             <Col lg={6}>    
                                 <div className="img">
                                     <img src={item.imgurl} alt="" />
@@ -79,17 +85,17 @@ const Blogs = () => {
 
                     <Row className='smallcards'>
                         {
-                            blogsAPI.slice(1,4).map((item,key)=>{
+                            blogsAPI.slice(1).map((item,key)=>{
                                 return(
 
                                     <Col lg={4} key={key} data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
-                                    <div className="smcard">
+                                    <div className="smcard" style={{cursor:"pointer"}} onClick={()=>handleSingleBlog(item.id)}>
                                         <div className="img">
                                             <img className='w-100' src={item.imgurl} alt="1.png" />
                                         </div>
                                         <div className="textside">
                                             <h3>{item.title}</h3>
-                                            <p>{item.paragraph.substring(0,50)} <span>Read More</span></p>
+                                            <p>{item.paragraph.substring(0,60)} <span>Read More</span></p>
         
                                             <div className="iconspart">
                                                 <div className="icon">
@@ -124,10 +130,10 @@ const Blogs = () => {
                         }
                        
                     </Row>
-                </div>
             </div>
+        </div>
     </>
   )
 }
 
-export default Blogs
+export default BlogPageComp

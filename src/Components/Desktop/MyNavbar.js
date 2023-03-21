@@ -42,7 +42,7 @@ const MyNavbar = (props) => {
 
         <div className={screenSize.dynamicWidth>=1200 &&screenSize.dynamicWidth <=1399?"myContainerMinimini d-flex":screenSize.dynamicWidth>=992 &&screenSize.dynamicWidth<=1199?"myContainer896 d-flex":"myContainerMini d-flex"}>
 
-        <Link to="/"><img src="./assets/images/Common/logo/mainlogo.png" alt="" /></Link>
+        <Link to="/"><img src="/assets/images/Common/logo/mainlogo.png" alt="" /></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="m-auto">

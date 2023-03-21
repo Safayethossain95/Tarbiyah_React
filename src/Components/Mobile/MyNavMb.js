@@ -11,7 +11,7 @@ const MyNavMb = () => {
 
         <div className="mycontainermb flexwrapnav">
 
-        <Link to="/"><img src="./assets/images/Common/logo/mainlogo.png" alt="" /></Link>
+        <Link to="/"><img src="/assets/images/Common/logo/mainlogo.png" alt="" /></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           </div>
@@ -21,7 +21,7 @@ const MyNavMb = () => {
             <Link className="nav-link" to="/courses">Courses</Link>
             <Link className="nav-link" to="/aboutus">About Us</Link>
             <Link className="nav-link" to="/notice">Notice</Link>
-            <Link className="nav-link" to="/portfolio">Blog</Link>
+            <Link className="nav-link" to="/blog">Blog</Link>
             <Link className="nav-link" to="/donation">Donation</Link>
             <Link className="nav-link" to="/contact">Contact Us</Link>
             

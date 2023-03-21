@@ -8,14 +8,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollTop from '../Components/Desktop/SubComponents/ScrollTop'
 import Footer from '../Components/Desktop/Footer'
-
-import BannerPageOther from '../Components/Desktop/BannerPageOther'
 import '../sass/sassFiles/desktop/homepage.scss'
 import '../sass/sassFiles/mobile/homepagemb.scss'
+import '../sass/sassFiles/mobile/blogpagemb.scss'
 import '../sass/sassFiles/desktop/blogpage.scss'
-import '../sass/sassFiles/mobile/donationpagemb.scss'
 
-import BlogPageComp from '../Components/Mobile/BlogPage/BlogPageComp'
+import BlogPageComp from '../Components/Desktop/BlogPage/BlogPageComp'
+import BlogPageCompMb from '../Components/Mobile/BlogPage/BlogPageCompMb'
 
 
 const BlogPage = () => {
@@ -42,10 +41,11 @@ const BlogPage = () => {
   }, [])
 
   return (
-    <>
+    
            <>
             <div className="mobile blogpagemb">
             <MyNavMb/>
+            <BlogPageCompMb/>
             <FooterMb/>
             <ScrollTop/>
             <CopyrightMb/>
@@ -59,7 +59,7 @@ const BlogPage = () => {
                 <Copuright/>
             </div>
     </>
-    </>
+    
   )
 }
 

@@ -13,6 +13,7 @@ import CoursesPage from "./pages/CoursesPage";
 import NoticePage from "./pages/NoticePage";
 import DonationPage from './pages/DonationPage';
 import BlogPage from './pages/BlogPage';
+import BlogPageDetails from './pages/BlogPageDetails';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/notice" element={<NoticePage />} />
           <Route path="/donation" element={<DonationPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogPageDetails />} />
         </Routes>
       </BrowserRouter>
       
