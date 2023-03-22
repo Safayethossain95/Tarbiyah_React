@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import ScrollToTop from './helpers/ScrollToTop';
 import {
   BrowserRouter,
   Routes,
@@ -14,6 +14,9 @@ import NoticePage from "./pages/NoticePage";
 import DonationPage from './pages/DonationPage';
 import BlogPage from './pages/BlogPage';
 import BlogPageDetails from './pages/BlogPageDetails';
+import CoursesDetailsPage from './pages/CoursesDetailsPage';
+import CourseDetailsPopularPage from './pages/CourseDetailsPopularPage';
+import CourseDetailsFeaturedPage from './pages/CourseDetailsFeaturedPage';
 
 function App() {
 
@@ -22,11 +25,15 @@ function App() {
     <>
        <BrowserRouter>
         
+          <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses/recent/:id" element={<CoursesDetailsPage />} />
+          <Route path="/courses/popular/:id" element={<CourseDetailsPopularPage />} />
+          <Route path="/courses/featured/:id" element={<CourseDetailsFeaturedPage />} />
           <Route path="/notice" element={<NoticePage />} />
           <Route path="/donation" element={<DonationPage />} />
           <Route path="/blog" element={<BlogPage />} />

@@ -5,10 +5,11 @@ import { courseCardAPI,popularCoursesCardAPI,featuredCoursesCardAPI } from '../.
 import CommonButton from './SubComponents/CommonButton'
 import {Nav,Tab} from 'react-bootstrap'
 import MediumHeading from './SubComponents/MediumHeading'
+import { useNavigate } from 'react-router-dom'
 const MostPopularCourses = () => {
 
     
-
+    const navigate= useNavigate()
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
         dynamicHeight: window.innerHeight
@@ -28,6 +29,16 @@ const MostPopularCourses = () => {
             console.log(screenSize.dynamicWidth)
         })
       }, [screenSize])
+
+      const handleSingleCourse=(mykey)=>{
+        navigate(`/courses/recent/${mykey}`)
+      }
+      const handleSingleCoursepopular=(mykey)=>{
+        navigate(`/courses/popular/${mykey}`)
+      }
+      const handleSingleCoursefeatured=(mykey)=>{
+        navigate(`/courses/featured/${mykey}`)
+      }
   return (
     <>
         <div className="mostpopularcoursessection" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
@@ -65,7 +76,7 @@ const MostPopularCourses = () => {
                             {
                                 courseCardAPI.map((item,key)=>{
                                     return(
-                                        <Col lg={4} key={key} data-aos-delay="400" data-aos="fade-in" data-aos-duration="1800">
+                                        <Col lg={4} onClick={()=>handleSingleCourse(item.id)} key={key} data-aos-delay="400" data-aos="fade-in" data-aos-duration="1800">
                                             <MPCcard apiprops={item}/>
                                         </Col>
                                     )
@@ -79,7 +90,7 @@ const MostPopularCourses = () => {
                             {
                                 popularCoursesCardAPI.map((item,key)=>{
                                     return(
-                                        <Col lg={4} key={key}>
+                                        <Col lg={4} onClick={()=>handleSingleCoursepopular(item.id)} key={key}>
                                             <MPCcard apiprops={item}/>
                                         </Col>
                                     )
@@ -93,7 +104,7 @@ const MostPopularCourses = () => {
                             {
                                 featuredCoursesCardAPI.map((item,key)=>{
                                     return(
-                                        <Col lg={4} key={key}>
+                                        <Col lg={4} onClick={()=>handleSingleCoursefeatured(item.id)} key={key}>
                                             <MPCcard apiprops={item}/>
                                         </Col>
                                     )

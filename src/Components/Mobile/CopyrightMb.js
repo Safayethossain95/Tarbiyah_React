@@ -11,12 +11,8 @@ const CopyrightMb = () => {
             
 
                 <Row style={{height:"100%",alignItems:"center"}} >
-                    <Col xs={12}>
-                        <div className="left text-center py-4">
-                            <p>© 2023. BSSIT. All right reserved</p>
-                        </div>
-                    </Col>
-                    <Col xs={12} className="text-center pb-4">
+                   
+                    <Col xs={12} className="text-center pt-4">
                     <div className="socials text-center">
                         
                         <a href="https://www.facebook.com/Bssit"><BsFacebook/></a>
@@ -31,6 +27,11 @@ const CopyrightMb = () => {
                         </div>
                         </div>
                         
+                    </Col>
+                    <Col xs={12}>
+                        <div className="left text-center">
+                            <p>© 2023. BSSIT. All right reserved</p>
+                        </div>
                     </Col>
                     
                 </Row>

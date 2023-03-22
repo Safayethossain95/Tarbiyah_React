@@ -394,13 +394,13 @@
             a{
                 color:#000!important;
                 svg{
-                    font-size: 40px;
+                    font-size: 25px;
                     color:#0E2C39;
                 }
             }
             .icondiv{
-                width: 40px;
-                height: 40px;
+                width: 25px;
+                height: 25px;
                 border-radius: 50%;
                 background-color: #0E2C39;
                 display: flex;
@@ -408,13 +408,15 @@
                 align-items: center;
                 svg{
                     color:#fff;
-                    font-size: 20px;
+                    font-size: 14px;
                 }
             }
         }
         .left{
+            margin-top: 10px;
+            margin-bottom: 40px;
             p{
-                @include myfont(16px,400,$main_font);
+                @include myfont(12px,400,$main_font);
             }
         }
     }

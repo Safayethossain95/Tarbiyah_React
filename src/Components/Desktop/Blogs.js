@@ -3,7 +3,10 @@ import {Row,Col,Button} from "react-bootstrap"
 import MediumHeading from './SubComponents/MediumHeading';
 import CommonButton from './SubComponents/CommonButton';
 import { blogsAPI } from '../../utils/BlogsCardAPI';
+import { useNavigate } from 'react-router-dom';
 const Blogs = () => {
+
+    const navigate= useNavigate()
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
         dynamicHeight: window.innerHeight
@@ -23,6 +26,9 @@ const Blogs = () => {
             console.log(screenSize.dynamicWidth)
         })
       }, [screenSize])
+      const handleSingleBlog=(mykey)=>{
+        navigate(`/blog/${mykey}`)
+      }
   return (
     <>
             <div className="blogssection" data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
@@ -32,7 +38,7 @@ const Blogs = () => {
                         {
                             blogsAPI.slice(0,1).map((item,key)=>{
                                 return( 
-                            <Row key={key}>
+                            <Row key={key} onClick={()=>handleSingleBlog(item.id)} style={{cursor:"pointer"}}>
                             <Col lg={6}>    
                                 <div className="img">
                                     <img src={item.imgurl} alt="" />
@@ -83,7 +89,7 @@ const Blogs = () => {
                                 return(
 
                                     <Col lg={4} key={key} data-aos-delay="400" data-aos="fade-up" data-aos-duration="1800">
-                                    <div className="smcard">
+                                    <div className="smcard" onClick={()=>handleSingleBlog(item.id)} style={{cursor:"pointer"}}>
                                         <div className="img">
                                             <img className='w-100' src={item.imgurl} alt="1.png" />
                                         </div>
