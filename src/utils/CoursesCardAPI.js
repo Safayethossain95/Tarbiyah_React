@@ -60,7 +60,24 @@ const courseCardAPI = [
                         },
                     ]
                 },
-            ]
+            ],
+            instructors:{
+                heading:"Course Instructor:",
+                rating:4.7,
+                ratingcount:30,
+                teachername:"Professor Mokhter Ahmad",
+                designation:"Tarbiyah Ins, Instructor",
+                ratingsection:{
+                    heading:"Rating",
+                    rating:4.7,
+                    totalratednumber:4200,
+                    fivestarpercent:60,
+                    fourstarpercent:30,
+                    threestarpercent:15,
+                    twostarpercent:10,
+                    onestarpercent:5,
+                }
+            }
 
 
         },
@@ -106,7 +123,24 @@ const courseCardAPI = [
                         },
                     ]
                 }
-            ]
+            ],
+            instructors:{
+                heading:"Course Instructor:",
+                rating:4.7,
+                ratingcount:30,
+                teachername:"Professor Mokhter Ahmad",
+                designation:"Tarbiyah Ins, Instructor",
+                 ratingsection:{
+                    heading:"Rating",
+                    rating:4.7,
+                    totalratednumber:4200,
+                    fivestarpercent:60,
+                    fourstarpercent:30,
+                    threestarpercent:15,
+                    twostarpercent:10,
+                    onestarpercent:5,
+                }
+            }
         },
         {
             id:3,
@@ -149,7 +183,24 @@ const courseCardAPI = [
                         },
                     ]
                 }
-            ]
+            ],
+            instructors:{
+                heading:"Course Instructor:",
+                rating:4.7,
+                ratingcount:30,
+                teachername:"Professor Mokhter Ahmad",
+                designation:"Tarbiyah Ins, Instructor",
+                 ratingsection:{
+                    heading:"Rating",
+                    rating:4.7,
+                    totalratednumber:4200,
+                    fivestarpercent:60,
+                    fourstarpercent:30,
+                    threestarpercent:15,
+                    twostarpercent:10,
+                    onestarpercent:5,
+                }
+            }
         },
         {
             id:4,
@@ -192,7 +243,24 @@ const courseCardAPI = [
                         },
                     ]
                 }
-            ]
+            ],
+            instructors:{
+                heading:"Course Instructor:",
+                rating:4.7,
+                ratingcount:30,
+                teachername:"Professor Mokhter Ahmad",
+                designation:"Tarbiyah Ins, Instructor",
+                 ratingsection:{
+                    heading:"Rating",
+                    rating:4.7,
+                    totalratednumber:4200,
+                    fivestarpercent:60,
+                    fourstarpercent:30,
+                    threestarpercent:15,
+                    twostarpercent:10,
+                    onestarpercent:5,
+                }
+            }
         },
         {
             id:5,
@@ -235,7 +303,24 @@ const courseCardAPI = [
                         },
                     ]
                 }
-            ]
+            ],
+            instructors:{
+                heading:"Course Instructor:",
+                rating:4.7,
+                ratingcount:30,
+                teachername:"Professor Mokhter Ahmad",
+                designation:"Tarbiyah Ins, Instructor",
+                 ratingsection:{
+                    heading:"Rating",
+                    rating:4.7,
+                    totalratednumber:4200,
+                    fivestarpercent:60,
+                    fourstarpercent:30,
+                    threestarpercent:15,
+                    twostarpercent:10,
+                    onestarpercent:5,
+                }
+            }
         },
         {
             id:6,
@@ -278,7 +363,24 @@ const courseCardAPI = [
                         },
                     ]
                 }
-            ]
+            ],
+            instructors:{
+                heading:"Course Instructor:",
+                rating:4.7,
+                ratingcount:30,
+                teachername:"Professor Mokhter Ahmad",
+                designation:"Tarbiyah Ins, Instructor",
+                 ratingsection:{
+                    heading:"Rating",
+                    rating:4.7,
+                    totalratednumber:4200,
+                    fivestarpercent:60,
+                    fourstarpercent:30,
+                    threestarpercent:15,
+                    twostarpercent:10,
+                    onestarpercent:5,
+                }
+            }
         },
     
 

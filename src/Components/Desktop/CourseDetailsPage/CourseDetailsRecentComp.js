@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import CoursesFirstTabSubComp from '../SubComponents/CoursesFirstTabSubComp';
 import Accordion from 'react-bootstrap/Accordion';
+import ProgressBar from "@ramonak/react-progress-bar";
 const CourseDetailsRecentComp = (props) => {
 
     const videoRef = useRef(null); // reference to video element
@@ -84,13 +85,55 @@ const CourseDetailsRecentComp = (props) => {
                                                 <div className="wrapper d-flex">
                                                     <span>{item.rating}</span>
                                                     {
-                                                        item.rating>4?
+                                                        item.rating>=4?
                                                         <>
                                                         <div className="stars">
                                                         <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
                                                         <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
                                                         <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
                                                         <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                        </div>
+                                                        
+                                                        
+                                                        </>
+                                                        :
+                                                        item.rating>=3?
+                                                        <>
+                                                        <div className="stars">
+                                                        <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                        </div>
+                                                        
+                                                        
+                                                        </>
+                                                        :
+                                                        item.rating>=2?
+                                                        <>
+                                                        <div className="stars">
+                                                        <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                        </div>
+                                                        
+                                                        
+                                                        </>
+                                                        :
+                                                        item.rating>=1?
+                                                        <>
+                                                        <div className="stars">
+                                                        <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                        <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
                                                         <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
 
                                                         </div>
@@ -162,8 +205,174 @@ const CourseDetailsRecentComp = (props) => {
                                                             
                                                         
                                                         </Tab.Pane>
-                                                        <Tab.Pane eventKey="second">
-                                                        abcdrf
+                                                        <Tab.Pane eventKey="second" className="secondtabcontent">
+                                                            
+                                                            <div className="content">
+                                                                <h2>{item.instructors.heading}</h2>
+                                                            </div>
+                                                            <Row className='align-items-center'>
+                                                                <Col lg={3} >
+                                                                    <div className="imgofins">
+                                                                        <img className='w-100' src="/assets/images/CourseDetailsPage/instructorpic.png" alt="" />
+                                                                    </div>
+                                                                   
+                                                                </Col>
+                                                                <Col lg={9}>
+                                                                <div className="detailofins">
+                                                                    <div className="rating">
+                                                                    <div className="wrapper d-flex">
+                                                                        <span>{item.rating}</span>
+                                                                        {
+                                                                            item.rating>=4?
+                                                                            <>
+                                                                            <div className="stars">
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            </>
+                                                                            :
+                                                                            item.rating>=3?
+                                                                            <>
+                                                                            <div className="stars">
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            </>
+                                                                            :
+                                                                            item.rating>=2?
+                                                                            <>
+                                                                            <div className="stars">
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            </>
+                                                                            :
+                                                                            item.rating>=1?
+                                                                            <>
+                                                                            <div className="stars">
+                                                                            <img src="/assets/images/Common/ratingpart/starfilled.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+                                                                            <img src="/assets/images/Common/ratingpart/starempty.png" alt="" />
+
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                            </>
+                                                                            :
+                                                                            ""
+                                                                        }
+                                                                        <span> &#40;30&#41;</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h3>Professor Mokhter Ahmad</h3>
+                                                                    <p className='designation'>Tarbiyah Ins, Instructor</p>
+                                                                    </div>
+                                                                </Col>
+                                                            </Row>
+                                                            <Row>
+                                                                <Col lg={12}>
+                                                                    <div className="content">
+                                                                        <h2>Rating</h2>
+                                                                    </div>
+                                                                    <div className="ratingboxbig">
+                                                                        <div className="heading">
+                                                                        <h4>{item.instructors.ratingsection.rating} <img src="/assets/images/CourseDetailsPage/filledstar.png" alt="" /></h4>
+                                                                        <p>Rating (4k+)</p>
+                                                                        </div>
+                                                                       
+                                                                        <Row className='starstogether align-items-center mt-3'>
+                                                                            <Col lg={4}>
+                                                                                <img src="/assets/images/CourseDetailsPage/5s.png" alt="" />
+                                                                            </Col>
+                                                                            <Col lg={8}>
+                                                                            <ProgressBar 
+                                                                                completed={item.instructors.ratingsection.fivestarpercent}
+                                                                                bgColor="#00ADD2"
+                                                                                height="10px"
+                                                                                isLabelVisible={false}
+                                                                                labelColor="#000000"
+                                                                                />
+                                                                            </Col>
+                                                                        </Row>
+                                                                        <Row className='starstogether align-items-center mt-3'>
+                                                                            <Col lg={4}>
+                                                                                <img src="/assets/images/CourseDetailsPage/4s.png" alt="" />
+                                                                            </Col>
+                                                                            <Col lg={8}>
+                                                                            <ProgressBar 
+                                                                                completed={item.instructors.ratingsection.fourstarpercent}
+                                                                                bgColor="#00ADD2"
+                                                                                height="10px"
+                                                                                isLabelVisible={false}
+                                                                                labelColor="#000000"
+                                                                                />
+                                                                            </Col>
+                                                                        </Row>
+                                                                        <Row className='starstogether align-items-center mt-3'>
+                                                                            <Col lg={4}>
+                                                                                <img src="/assets/images/CourseDetailsPage/3s.png" alt="" />
+                                                                            </Col>
+                                                                            <Col lg={8}>
+                                                                            <ProgressBar 
+                                                                                completed={item.instructors.ratingsection.threestarpercent}
+                                                                                bgColor="#00ADD2"
+                                                                                height="10px"
+                                                                                isLabelVisible={false}
+                                                                                labelColor="#000000"
+                                                                                />
+                                                                            </Col>
+                                                                        </Row>
+                                                                        <Row className='starstogether align-items-center mt-3'>
+                                                                            <Col lg={4}>
+                                                                                <img src="/assets/images/CourseDetailsPage/2s.png" alt="" />
+                                                                            </Col>
+                                                                            <Col lg={8}>
+                                                                            <ProgressBar 
+                                                                                completed={item.instructors.ratingsection.twostarpercent}
+                                                                                bgColor="#00ADD2"
+                                                                                height="10px"
+                                                                                isLabelVisible={false}
+                                                                                labelColor="#000000"
+                                                                                />
+                                                                            </Col>
+                                                                        </Row>
+                                                                        <Row className='starstogether align-items-center mt-3'>
+                                                                            <Col lg={4}>
+                                                                                <img src="/assets/images/CourseDetailsPage/1s.png" alt="" />
+                                                                            </Col>
+                                                                            <Col lg={8}>
+                                                                            <ProgressBar 
+                                                                                completed={item.instructors.ratingsection.onestarpercent}
+                                                                                bgColor="#00ADD2"
+                                                                                height="10px"
+                                                                                isLabelVisible={false}
+                                                                                labelColor="#000000"
+                                                                                />
+                                                                            </Col>
+                                                                        </Row>
+                                                                    </div>
+                                                                </Col>
+                                                            </Row>
                                                         </Tab.Pane>
                                                         <Tab.Pane eventKey="third">
                                                         abcdrfsdf
