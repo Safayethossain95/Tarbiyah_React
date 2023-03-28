@@ -29,7 +29,7 @@ const FeaturedCoursesSectionMb = () => {
                                 featuredCoursesCardAPI.map((item,key)=>{
                                     return(
                                         <div key={key} >
-                                            <MPCcard apiprops={item}/>
+                                            <MPCcard idprop={`featured/${item.id}`} apiprops={item}/>
                                         </div>
                                     )
                                 })

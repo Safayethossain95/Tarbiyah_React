@@ -19,13 +19,18 @@ import FeaturedCoursesSection from '../Components/Desktop/CoursesPage/FeaturedCo
 import MostPopularCoursesMb from '../Components/Mobile/MostPopularCoursesMb'
 import RecentCoursesSectionMb from '../Components/Mobile/CoursesPage/RecentCoursesSectionMb'
 import FeaturedCoursesSectionMb from '../Components/Mobile/CoursesPage/FeaturedCoursesSectionMb'
+import CourseDetailsFeaturedComp from '../Components/Desktop/CourseDetailsPage/CourseDetailsFeaturedComp'
+import { useParams } from 'react-router-dom';
+import CourseFeaturedComp from '../Components/Mobile/CourseDetailsPage/CourseFeaturedComp'
 const CourseDetailsFeaturedPage = () => {
+  const {id} = useParams()
     
   return (
     <>
        <div className="mobile">
-        <div className="coursespagemb">
+        <div className="coursesdetailsmb">
         <MyNavMb/>
+        <CourseFeaturedComp myid={id}/>
         <FooterMb/>
         <ScrollTop/>
         <CopyrightMb/>
@@ -33,9 +38,9 @@ const CourseDetailsFeaturedPage = () => {
         </div>
         </div>
         
-        <div className="desktop coursespagedesk">
+        <div className="desktop coursespagedesk coursedetailsrecent">
             <MyNavbar/>
-            
+            <CourseDetailsFeaturedComp myid={id}/>
             <ScrollTop/>
             <Footer/>
             <Copuright/>

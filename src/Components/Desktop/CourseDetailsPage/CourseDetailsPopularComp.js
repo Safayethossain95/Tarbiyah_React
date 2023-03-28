@@ -1,7 +1,7 @@
 import React,{useEffect,useState,useRef} from 'react'
 import {Row,Col} from 'react-bootstrap'
 import { motion } from "framer-motion";
-import { courseCardAPI } from '../../../utils/CoursesCardAPI';
+import { courseCardAPI,popularCoursesCardAPI } from '../../../utils/CoursesCardAPI';
 import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import CoursesFirstTabSubComp from '../SubComponents/CoursesFirstTabSubComp';
@@ -9,7 +9,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import ProgressBar from "@ramonak/react-progress-bar";
 import Slider from "react-slick";
 import CommonButton from '../../../Components/Desktop/SubComponents/CommonButton'
-const CourseDetailsRecentComp = (props) => {
+const CourseDetailsPopularComp = (props) => {
 
     const videoRef = useRef(null); // reference to video element
     const [playing, setPlaying] = useState(false);
@@ -60,7 +60,7 @@ const CourseDetailsRecentComp = (props) => {
         transition={{delay:0,duration:1.2}}>
             <div className={screenSize.dynamicWidth>=1200 &&screenSize.dynamicWidth <=1399?"myContainerMinimini":screenSize.dynamicWidth>=992 &&screenSize.dynamicWidth<=1199?"myContainer896":"myContainerMini"}>
                 {
-                    courseCardAPI.map((item,key)=>{
+                    popularCoursesCardAPI.map((item,key)=>{
                         if(item.id==props.myid){
                             return(
                                 <Row key={key}>
@@ -601,4 +601,4 @@ const CourseDetailsRecentComp = (props) => {
   )
 }
 
-export default CourseDetailsRecentComp
+export default CourseDetailsPopularComp

@@ -5,6 +5,7 @@ import '../sass/sassFiles/desktop/homepage.scss'
 import '../sass/sassFiles/mobile/homepagemb.scss'
 import '../sass/sassFiles/desktop/coursespage.scss'
 import '../sass/sassFiles/mobile/coursespagemb.scss'
+import '../sass/sassFiles/mobile/coursedetailspagemb.scss'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollTop from '../Components/Desktop/SubComponents/ScrollTop'
@@ -19,13 +20,18 @@ import FeaturedCoursesSection from '../Components/Desktop/CoursesPage/FeaturedCo
 import MostPopularCoursesMb from '../Components/Mobile/MostPopularCoursesMb'
 import RecentCoursesSectionMb from '../Components/Mobile/CoursesPage/RecentCoursesSectionMb'
 import FeaturedCoursesSectionMb from '../Components/Mobile/CoursesPage/FeaturedCoursesSectionMb'
+import { useParams } from 'react-router-dom';
+import CourseDetailsPopularComp from '../Components/Desktop/CourseDetailsPage/CourseDetailsPopularComp'
+import CoursePopularComp from '../Components/Mobile/CourseDetailsPage/CoursePopularComp'
 const CourseDetailsPopularPage = () => {
-    
+  
+  const {id} = useParams()
   return (
     <>
        <div className="mobile">
-        <div className="coursespagemb">
+        <div className="coursesdetailsmb">
         <MyNavMb/>
+        <CoursePopularComp myid={id}/>
         <FooterMb/>
         <ScrollTop/>
         <CopyrightMb/>
@@ -33,9 +39,9 @@ const CourseDetailsPopularPage = () => {
         </div>
         </div>
         
-        <div className="desktop coursespagedesk">
+        <div className="desktop coursespagedesk coursedetailsrecent">
             <MyNavbar/>
-            
+            <CourseDetailsPopularComp myid={id}/>
             <ScrollTop/>
             <Footer/>
             <Copuright/>

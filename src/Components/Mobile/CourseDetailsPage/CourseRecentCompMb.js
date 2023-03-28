@@ -1,40 +1,17 @@
 import React,{useEffect,useState,useRef} from 'react'
 import {Row,Col} from 'react-bootstrap'
-import { motion } from "framer-motion";
 import { courseCardAPI } from '../../../utils/CoursesCardAPI';
 import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
-import CoursesFirstTabSubComp from '../SubComponents/CoursesFirstTabSubComp';
 import Accordion from 'react-bootstrap/Accordion';
 import ProgressBar from "@ramonak/react-progress-bar";
 import Slider from "react-slick";
-import CommonButton from '../../../Components/Desktop/SubComponents/CommonButton'
-const CourseDetailsRecentComp = (props) => {
-
+import CoursesFirstTabSubComp from '../../Desktop/SubComponents/CoursesFirstTabSubComp';
+import CommonButton from '../../Desktop/SubComponents/CommonButton';
+const CourseRecentCompMb = (props) => {
     const videoRef = useRef(null); // reference to video element
     const [playing, setPlaying] = useState(false);
-    
-    const [screenSize, getDimension] = useState({
-        dynamicWidth: window.innerWidth,
-        dynamicHeight: window.innerHeight
-      });
-      const setDimension = () => {
-        getDimension({
-          dynamicWidth: window.innerWidth,
-          dynamicHeight: window.innerHeight
-        })
-      }
-      
-      useEffect(() => {
-        window.addEventListener('resize', setDimension);
-        
-        return(() => {
-            window.removeEventListener('resize', setDimension);
-            console.log(screenSize.dynamicWidth)
-        })
-      }, [screenSize])
-
-      const handleOverlayClick=()=>{
+    const handleOverlayClick=()=>{
         setPlaying(true);
         videoRef.current.play();
       }
@@ -55,17 +32,15 @@ const CourseDetailsRecentComp = (props) => {
       };
   return (
     <>
-        <motion.div className="coursedetailsrecentcomp" initial={{ y : 40,opacity:0.4 }}
-        whileInView={{ y:0,opacity:1}}
-        transition={{delay:0,duration:1.2}}>
-            <div className={screenSize.dynamicWidth>=1200 &&screenSize.dynamicWidth <=1399?"myContainerMinimini":screenSize.dynamicWidth>=992 &&screenSize.dynamicWidth<=1199?"myContainer896":"myContainerMini"}>
-                {
+        <div className="courserecentcompmb">
+            <div className="mycontainermb">
+            {
                     courseCardAPI.map((item,key)=>{
                         if(item.id==props.myid){
                             return(
-                                <Row key={key}>
-                                    <Col lg={8}>
-                                        <div className="video">
+                                <Row>
+                                    <Col xs={12}>
+                                    <div className="video">
                                             <video ref={videoRef} width="100%" height="auto" controls >
                                             <source src="/assets/videos/singlecoursevideo.mp4" type="video/mp4"/>
                                             </video>
@@ -76,10 +51,10 @@ const CourseDetailsRecentComp = (props) => {
                                         )}
                                         </div>
                                         <div className="restofthecontent">
-                                            <h3>{item.head}</h3>
+                                        <h3>{item.head}</h3>
 
-                                            <Row style={{alignItems:"center",marginBottom:"30px"}}>
-                                                <Col style={{flex:"1 1 40%"}}>
+                                        <Row className='teachersmalldetail' style={{alignItems:"center",marginBottom:"30px"}}>
+                                                <Col xs={8}>
                                                     <div className="flexwrap myborderright">
                                                         <div className="teacherimg">
                                                             <img src={item.imgurl} alt="" />
@@ -89,7 +64,7 @@ const CourseDetailsRecentComp = (props) => {
                                                         </div>
                                                     </div>
                                                 </Col>
-                                                <Col style={{flex:"1 1 30%"}}>
+                                                <Col xs={4}>
                                                     <div className="flexwrap">
 
                                                     <div className="enrolled">
@@ -97,7 +72,7 @@ const CourseDetailsRecentComp = (props) => {
                                                     </div>
                                                     </div>
                                                 </Col>
-                                                <Col style={{flex:"1 1 30%"}}>
+                                                <Col xs={12} className="text-center mt-3">
                                                 <div className="rating">
                                                 <div className="wrapper d-flex">
                                                     <span>{item.rating}</span>
@@ -229,8 +204,8 @@ const CourseDetailsRecentComp = (props) => {
                                                             </div>
                                                             <Row className='align-items-center'>
                                                                 <Col lg={3} >
-                                                                    <div className="imgofins">
-                                                                        <img className='w-100' src="/assets/images/CourseDetailsPage/instructorpic.png" alt="" />
+                                                                    <div className="imgofins text-center">
+                                                                        <img  src="/assets/images/CourseDetailsPage/instructorpic.png" alt="" />
                                                                     </div>
                                                                    
                                                                 </Col>
@@ -298,7 +273,7 @@ const CourseDetailsRecentComp = (props) => {
                                                                             :
                                                                             ""
                                                                         }
-                                                                        <span> &#40;30&#41;</span>
+                                                                        <span> &#40;30 Rating&#41;</span>
                                                                         </div>
                                                                     </div>
                                                                     <h3>Professor Mokhter Ahmad</h3>
@@ -318,70 +293,70 @@ const CourseDetailsRecentComp = (props) => {
                                                                         </div>
                                                                        
                                                                         <Row className='starstogether align-items-center mt-3'>
-                                                                            <Col lg={4}>
-                                                                                <img src="/assets/images/CourseDetailsPage/5s.png" alt="" />
+                                                                            <Col xs={4} lg={4}>
+                                                                                <img className='w-100' src="/assets/images/CourseDetailsPage/5s.png" alt="" />
                                                                             </Col>
-                                                                            <Col lg={8}>
+                                                                            <Col xs={8} lg={8}>
                                                                             <ProgressBar 
                                                                                 completed={item.instructors.ratingsection.fivestarpercent}
                                                                                 bgColor="#00ADD2"
-                                                                                height="10px"
+                                                                                height="5px"
                                                                                 isLabelVisible={false}
                                                                                 labelColor="#000000"
                                                                                 />
                                                                             </Col>
                                                                         </Row>
                                                                         <Row className='starstogether align-items-center mt-3'>
-                                                                            <Col lg={4}>
-                                                                                <img src="/assets/images/CourseDetailsPage/4s.png" alt="" />
+                                                                            <Col xs={4}>
+                                                                                <img className='w-100' src="/assets/images/CourseDetailsPage/4s.png" alt="" />
                                                                             </Col>
-                                                                            <Col lg={8}>
+                                                                            <Col xs={8}>
                                                                             <ProgressBar 
                                                                                 completed={item.instructors.ratingsection.fourstarpercent}
                                                                                 bgColor="#00ADD2"
-                                                                                height="10px"
+                                                                                height="5px"
                                                                                 isLabelVisible={false}
                                                                                 labelColor="#000000"
                                                                                 />
                                                                             </Col>
                                                                         </Row>
                                                                         <Row className='starstogether align-items-center mt-3'>
-                                                                            <Col lg={4}>
-                                                                                <img src="/assets/images/CourseDetailsPage/3s.png" alt="" />
+                                                                            <Col xs={4}>
+                                                                                <img className='w-100' src="/assets/images/CourseDetailsPage/3s.png" alt="" />
                                                                             </Col>
-                                                                            <Col lg={8}>
+                                                                            <Col xs={8}>
                                                                             <ProgressBar 
                                                                                 completed={item.instructors.ratingsection.threestarpercent}
                                                                                 bgColor="#00ADD2"
-                                                                                height="10px"
+                                                                                height="5px"
                                                                                 isLabelVisible={false}
                                                                                 labelColor="#000000"
                                                                                 />
                                                                             </Col>
                                                                         </Row>
                                                                         <Row className='starstogether align-items-center mt-3'>
-                                                                            <Col lg={4}>
-                                                                                <img src="/assets/images/CourseDetailsPage/2s.png" alt="" />
+                                                                            <Col xs={4}>
+                                                                                <img className='w-100' src="/assets/images/CourseDetailsPage/2s.png" alt="" />
                                                                             </Col>
-                                                                            <Col lg={8}>
+                                                                            <Col xs={8}>
                                                                             <ProgressBar 
                                                                                 completed={item.instructors.ratingsection.twostarpercent}
                                                                                 bgColor="#00ADD2"
-                                                                                height="10px"
+                                                                                height="5px"
                                                                                 isLabelVisible={false}
                                                                                 labelColor="#000000"
                                                                                 />
                                                                             </Col>
                                                                         </Row>
                                                                         <Row className='starstogether align-items-center mt-3'>
-                                                                            <Col lg={4}>
-                                                                                <img src="/assets/images/CourseDetailsPage/1s.png" alt="" />
+                                                                            <Col xs={4}>
+                                                                                <img className='w-100' src="/assets/images/CourseDetailsPage/1s.png" alt="" />
                                                                             </Col>
-                                                                            <Col lg={8}>
+                                                                            <Col xs={8}>
                                                                             <ProgressBar 
                                                                                 completed={item.instructors.ratingsection.onestarpercent}
                                                                                 bgColor="#00ADD2"
-                                                                                height="10px"
+                                                                                height="5px"
                                                                                 isLabelVisible={false}
                                                                                 labelColor="#000000"
                                                                                 />
@@ -400,7 +375,7 @@ const CourseDetailsRecentComp = (props) => {
                                                                     item.studentreview.data.map((item4,key4)=>{
                                                                         return(
                                                                 <div className="sliderbox" key={key4}>
-                                                                <div className="topdiv d-flex">
+                                                                <div className="topdiv d-flex align-items-center">
                                                                     <div className="leftdiv">
                                                                         <img src={item4.img} alt="" />
                                                                     </div>
@@ -488,17 +463,8 @@ const CourseDetailsRecentComp = (props) => {
                                                     </Col>
                                                 </Row>
                                                 </Tab.Container>
-
-                                            </div>
-
                                                 
-                                                
-                                            
-                                        </div>
-
-                                    </Col>
-                                    <Col lg={4}>
-                                        <div className="pricebox">
+                                                <div className="pricebox">
                                             <div className="toppart">
                                                 <h4>৳{item.pricebox.price}</h4>
                                             </div>
@@ -586,19 +552,18 @@ const CourseDetailsRecentComp = (props) => {
                                                 <CommonButton text="Enroll Now"/>
                                             </div>
                                         </div>
+                                            </div>
+                                        </div>
                                     </Col>
                                 </Row>
                             )
                         }
                     })
                 }
-                
             </div>
-
-
-        </motion.div>
+        </div>
     </>
   )
 }
 
-export default CourseDetailsRecentComp
+export default CourseRecentCompMb

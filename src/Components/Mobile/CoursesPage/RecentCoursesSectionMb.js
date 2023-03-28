@@ -15,6 +15,7 @@ const RecentCoursesSectionMb = () => {
         centerPadding: '50px',
         arrows:false
       };
+      
   return (
     <>
         <motion.div className="mostpopularcoursesmb" style={{marginTop:"0px"}} initial={{ y : 40,opacity:0 }}
@@ -29,7 +30,7 @@ const RecentCoursesSectionMb = () => {
                                 courseCardAPI.map((item,key)=>{
                                     return(
                                         <div key={key} >
-                                            <MPCcard apiprops={item}/>
+                                            <MPCcard idprop={`recent/${item.id}`} apiprops={item}/>
                                         </div>
                                     )
                                 })

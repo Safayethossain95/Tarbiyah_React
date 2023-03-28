@@ -3,6 +3,7 @@ import Footer from '../Components/Desktop/Footer'
 import MyNavbar from '../Components/Desktop/MyNavbar'
 import '../sass/sassFiles/desktop/homepage.scss'
 import '../sass/sassFiles/mobile/homepagemb.scss'
+import '../sass/sassFiles/mobile/coursedetailspagemb.scss'
 import '../sass/sassFiles/desktop/coursedetailspage.scss'
 
 import 'aos/dist/aos.css';
@@ -13,14 +14,16 @@ import Copuright from '../Components/Desktop/Copuright'
 import CopyrightMb from '../Components/Mobile/CopyrightMb'
 import CourseDetailsRecentComp from '../Components/Desktop/CourseDetailsPage/CourseDetailsRecentComp'
 import { useParams } from 'react-router-dom';
+import CourseRecentCompMb from '../Components/Mobile/CourseDetailsPage/CourseRecentCompMb'
 const CoursesDetailsPage = () => {
     const {id} = useParams()
     
   return (
     <>
        <div className="mobile">
-        <div className="coursespagemb">
+        <div className="coursesdetailsmb">
         <MyNavMb/>
+        <CourseRecentCompMb myid={id}/>
         <FooterMb/>
         <ScrollTop/>
         <CopyrightMb/>

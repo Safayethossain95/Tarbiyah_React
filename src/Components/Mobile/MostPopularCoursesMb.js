@@ -29,7 +29,7 @@ const MostPopularCoursesMb = () => {
                                 popularCoursesCardAPI.map((item,key)=>{
                                     return(
                                         <div key={key} >
-                                            <MPCcard apiprops={item}/>
+                                            <MPCcard idprop={`popular/${item.id}`} apiprops={item}/>
                                         </div>
                                     )
                                 })

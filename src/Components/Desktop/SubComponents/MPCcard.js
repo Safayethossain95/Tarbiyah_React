@@ -1,10 +1,15 @@
 import React,{useState} from 'react'
 import {Row,Col} from "react-bootstrap"
+import { useNavigate } from 'react-router-dom'
 const MPCcard = (props) => {
+    const navigate = useNavigate()
     const [rating,setrating] = useState(4.7)
+    const handleSingleCourse=(mykey)=>{
+        navigate(`/courses/${mykey}`)
+      }
   return (
     <>
-        <div className="mpcCard" >
+        <div className="mpcCard" onClick={()=>handleSingleCourse(props.idprop)}>
             <div className="img">
                 <img className='w-100' src={props.apiprops.bigimgurl} alt="cardpic1" />
                 
